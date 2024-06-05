@@ -56,10 +56,12 @@ const playGame = () => {
     }
     if (playerScore === 3) {
         console.log("-----------------------");
+        console.log(`Scores: ${playerScore} | ${computerScore} `);
         console.log("Congratulations! You won!");
         playAgain();
     } else {
         console.log("-----------------------");
+        console.log(`Scores: ${playerScore} | ${computerScore} `);
         console.log("Unlucky.. You lost.")
         playAgain();
     }
@@ -78,6 +80,5 @@ const playAgain = () => {
         playAgain();
     }
 }
-
 
 playGame();

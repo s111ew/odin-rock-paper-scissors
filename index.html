@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="index.js"></script>
-    <title>Rock Paper Scissors</title>
-  </head>
-  <body>
-    <h1>Play RPS in the JavaScript console</h1>
-    <p class="rotate-90">-----------------------------------------></p>
-    <style>
-      .rotate-90 {
-        transform: rotate(90deg);
-        display: inline-block;
-      }
-    </style>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="stylesheet.css">
+  <title>Rock, Paper, Scissors</title>
+</head>
+<body>
+  <div class="header"><h1>Rock, Paper, Scissors</h1>
+  <p>Select Rock, Paper or Scissors using the icons below and try to beat the computer. First to 5 wins!</p></div>
+  <div class="icons" "computerIcons">
+    <div id="computerScore">0</div>
+    <div id="computerRock" class="emoji">&#9994;</div>
+    <div id="computerPaper" class="emoji">&#9995;</div>
+    <div id="computerScissors" class="emoji">&#9996;</div>
+  </div>
+  <div id="vs">VS.</div>
+  <div class="icons" "playerIcons">
+    <div id="playerScore">0</div>
+    <div id="playerRock" class="emoji">&#9994;</div>
+    <div id="playerPaper" class="emoji">&#9995;</div>
+    <div id="playerScissors" class="emoji">&#9996;</div>
+  </div>
+
+</body>
 </html>
