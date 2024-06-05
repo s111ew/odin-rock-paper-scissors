@@ -12,20 +12,20 @@ const playRound = (playerChoice, computerChoice) => {
     if ((playerChoice === "rock" && computerChoice === "scissors") || 
         (playerChoice === "paper" && computerChoice === "rock") || 
         (playerChoice === "scissors" && computerChoice === "paper")) {
-        gameState.textContent = "Win!";
+        gameState.textContent = "👍 Win! 👍";
         gameState.classList.add("computerPulse");
         setTimeout(() => {
             gameState.classList.remove('computerPulse');
         }, 500);
         ++playerScore;
     } else if (playerChoice === computerChoice) {
-        gameState.textContent = "Draw!";
+        gameState.textContent = "🤝 Draw! 🤝";
         gameState.classList.add("computerPulse");
         setTimeout(() => {
             gameState.classList.remove('computerPulse');
         }, 500);
     } else {
-        gameState.textContent = "Lose!";
+        gameState.textContent = "👎 Lose! 👎";
         gameState.classList.add("computerPulse");
         setTimeout(() => {
             gameState.classList.remove('computerPulse');
