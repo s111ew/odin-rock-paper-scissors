@@ -3,16 +3,16 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
+    user-select: none;         /* Non-prefixed version, currently supported by Chrome, Opera and Edge */
 }
 
 .header {
     text-align: center;
     margin-bottom: 30px;
-}
-
-.header>p {
-    margin-left: 100px;
-    margin-right: 100px;
 }
 
 .playerIcons {
@@ -29,18 +29,69 @@ body {
     align-items: center;
 }
 
+.computerIcons > .emoji {
+    filter: grayscale(1)
+}
+
+.computerIcons > .emoji:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: 0.5;
+}
+
+.pulse {
+    animation: pulse 0.5s;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1.3); }
+    25% { transform: scale(1.5); }
+    50% { transform: scale(1.7); }
+    75% { transform: scale(1.5); }
+    100% { transform: scale(1.3); }
+}
+
+.computerPulse {
+    animation: computerPulse 0.5s;
+}
+
+@keyframes computerPulse {
+    0% { transform: scale(1.1); }
+    25% { transform: scale(1.3); }
+    50% { transform: scale(1.5); }
+    75% { transform: scale(1.3); }
+    100% { transform: scale(1.1); }
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 0px) rotate(0deg); }
+  10% { transform: translate(-1px, 0px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 0px) rotate(0deg); }
+  40% { transform: translate(1px, 0px) rotate(1deg); }
+  50% { transform: translate(-1px, 0px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 0px) rotate(-1deg); }
+  80% { transform: translate(-1px, 0px) rotate(1deg); }
+  90% { transform: translate(1px, 0px) rotate(0deg); }
+  100% { transform: translate(1px, 0px) rotate(-1deg); }
+}
+
 .emoji {
     font-size: 72px;
 }
 
 .playerIcons > .emoji:hover {
-    transform: translateY(-10px);
+    transform: scale(1.2);
     transition: transform 0.3s ease;
     cursor: pointer;
 }
 
 .whosPlaying {
     font-size: 32px;
+}
+
+.computerIcons>.whosPlaying {
+    filter: grayscale(1)
 }
 
 #vs {
@@ -57,6 +108,10 @@ body {
 }
 
 #gameState {
-    text-align: center;
     margin-top: 30px;
+}
+
+.moveDown {
+    transform: translateY(15px);
+    transition: transform 0.3s ease;
 }
