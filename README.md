@@ -1,1 +1,1 @@
-Created an interactive 'Rock, Paper, Scissors' game which the user can play completely in the JavaScript console. This small project was great for me to practice using functions and how they interact with eachother. I even integrated my first 'while' loop.
+Play Rock, Paper, Scissors against the computer. Now feating a graphical interface for user input.
